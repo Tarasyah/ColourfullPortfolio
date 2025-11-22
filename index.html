@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarasyah Fazlin | Front-End Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Varela+Round&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Config for Palette -->
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-grid-pattern relative flex flex-col items-center pb-6">
+
+    <!-- CRT Overlay -->
+    <div class="fixed inset-0 crt-overlay z-50 opacity-30 h-full w-full pointer-events-none"></div>
+    <div class="fixed inset-0 bg-radial-gradient z-40 pointer-events-none" style="background: radial-gradient(circle, transparent 60%, rgba(45, 27, 20, 0.9) 100%);"></div>
+
+    <!-- Theme Switcher -->
+    <div class="theme-dock">
+        <div id="theme-toggle-btn" class="theme-btn" title="Change Theme">
+            <i data-lucide="palette" class="w-6 h-6"></i>
+        </div>
+        <div id="theme-menu" class="theme-menu">
+            <div class="theme-option" data-theme="arabic">
+                <div class="theme-circle" style="background: #ea5b25; border-color: #3e2723;"></div> Arabia 
+            </div>
+            <div class="theme-option" data-theme="japanese">
+                <div class="theme-circle" style="background: #ffb7c5; border-color: #5a5a5a;"></div> Japan
+            </div>
+            <div class="theme-option" data-theme="chinese">
+                <div class="theme-circle" style="background: #ff0000; border-color: #ffd700;"></div> China
+            </div>
+            <div class="theme-option" data-theme="egypt">
+                <div class="theme-circle" style="background: #d4af37; border-color: #004e92;"></div> Egypt
+            </div>
+            <div class="theme-option" data-theme="finlandia">
+                <div class="theme-circle" style="background: #00a7e1; border-color: #ffffff;"></div> Finland
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-full p-4 md:p-8 z-10 flex flex-col gap-12">
+
+        <!-- Header Section -->
+        <header class="text-center relative py-4">
+            <div class="absolute top-0 left-1/4 text-krica-amber sparkle text-2xl" style="animation-delay: 0s;">✦</div>
+            <div class="absolute bottom-0 right-1/4 text-krica-orange sparkle text-3xl" style="animation-delay: 1s;">✦</div>
+            
+            <h1 class="interactive-3d-text font-header text-5xl md:text-7xl text-white text-glow tracking-wide uppercase relative inline-block">
+                Tarasyah Fazlin
+                <span class="absolute -right-8 -top-4 text-3xl animate-pulse-slow">✨</span>
+            </h1>
+            <div class="mt-4 flex flex-wrap justify-center gap-4">
+                <span class="bg-krica-amber text-krica-brown font-bold px-6 py-2 rounded-full border-2 border-krica-brown shadow-md rotate-1 animate-float-slow">Front-End Developer</span>
+                <span class="bg-krica-orange text-white font-bold px-6 py-2 rounded-full border-2 border-krica-brown shadow-md -rotate-1 animate-float-slow" style="animation-delay: 1s;">AI Specialist</span>
+            </div>
+        </header>
+
+        <!-- HERO SECTION - RETRO TERMINAL STYLE -->
+        <section class="w-full max-w-4xl mx-auto relative group">
+            <div class="hero-terminal transform transition-transform duration-500 hover:scale-[1.01]">
+                <!-- Terminal Header -->
+                <div class="terminal-header">
+                    <div class="flex gap-2">
+                        <div class="terminal-dot bg-red-500"></div>
+                        <div class="terminal-dot bg-yellow-500"></div>
+                        <div class="terminal-dot bg-green-500"></div>
+                    </div>
+                    <div class="text-xs text-white/40 font-mono ml-4 flex-grow text-center">user@tarasyah-portfolio: ~</div>
+                    <div class="text-xs text-green-500 font-mono">● SYSTEM ONLINE</div>
+                </div>
+
+                <!-- Terminal Content (Image) -->
+                <div class="relative h-[300px] md:h-[400px] w-full bg-black overflow-hidden">
+                    <div class="absolute inset-0 bg-grid-pattern opacity-20 z-10 pointer-events-none"></div>
+                    <img src="image/unnamed.png" 
+                         alt="Hero Image" 
+                         class="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105">
+                    
+                    <!-- Overlay Text/Glitch Effect -->
+                    <!-- Overlay Text/Glitch Effect -->
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <div class="bg-black/70 backdrop-blur-sm border border-white/10 px-4 py-2 rounded text-green-400 font-mono text-xs">
+                            > INITIALIZING CREATIVE SEQUENCE...<span class="animate-pulse">_</span>
+                        </div>
+                    </div>
+
+                    <!-- Open To Work Button (Bottom Right) -->
+                    <div class="absolute bottom-6 right-6 z-20">
+                        <a href="https://wa.me/6289674095935" target="_blank" class="group relative bg-green-500 hover:bg-green-400 text-black font-bold font-mono py-2 px-6 rounded border-2 border-green-300 shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:shadow-[0_0_25px_rgba(34,197,94,0.8)] transition-all duration-300 flex items-center gap-2 overflow-hidden">
+                            <span class="relative z-10">● OPEN TO WORK</span>
+                            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE: GENERAL SUMMARY -->
+        <div class="w-full overflow-hidden bg-krica-amber border-y-4 border-krica-brown py-2 rotate-1">
+            <div class="whitespace-nowrap animate-scroll flex gap-10 items-center">
+                <div class="font-header text-krica-brown text-2xl flex gap-10">
+                    <span>★ FRONT-END DEVELOPER</span>
+                    <span>★ NEXT.JS SPECIALIST</span>
+                    <span>★ AI & PROMPT ENGINEERING</span>
+                    <span>★ HUMANITIES BACKGROUND</span>
+                    <span>★ ARABIC LITERATURE</span>
+                </div>
+                <div class="font-header text-krica-brown text-2xl flex gap-10" aria-hidden="true">
+                    <span>★ FRONT-END DEVELOPER</span>
+                    <span>★ NEXT.JS SPECIALIST</span>
+                    <span>★ AI & PROMPT ENGINEERING</span>
+                    <span>★ HUMANITIES BACKGROUND</span>
+                    <span>★ ARABIC LITERATURE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT ME SECTION - CYBER SCROLL STYLE -->
+        <section class="flex flex-col gap-8">
+            <div class="cyber-scroll p-8 md:p-10 shadow-xl">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <!-- Avatar/Icon -->
+                    <div class="relative shrink-0">
+                        <div class="w-24 h-24 bg-krica-orange rounded-full flex items-center justify-center border-4 border-krica-brown shadow-inner relative z-10">
+                            <span class="text-4xl">👋</span>
+                        </div>
+                        <div class="absolute inset-0 bg-krica-brown rounded-full translate-x-1 translate-y-1 -z-0"></div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+                            <h2 class="font-header text-3xl text-krica-brown">Hi, I'm Tarasyah!</h2>
+                        </div>
+                        <p class="text-black/80 leading-relaxed text-lg">
+                            Recent graduate from the <strong class="text-krica-orange">University of Indonesia</strong> with a background in <strong class="text-krica-orange">Humanities (Arabic Literature)</strong> and diverse experience in <strong class="text-krica-orange">Web Development</strong>, <strong class="text-krica-orange">Data Analytics</strong>, and <strong class="text-krica-orange">Administration</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS REEL SECTION -->
+        <section class="w-full flex flex-col items-center gap-10">
+             <!-- Moving Line Header -->
+             <div class="w-full overflow-hidden bg-krica-amber border-y-4 border-krica-brown py-2 rotate-1">
+                <div class="whitespace-nowrap animate-scroll-reverse flex gap-4 items-center">
+                    <div class="font-header text-krica-brown text-lg flex gap-6">
+                        <span>★ PROJECTS ★ PORTFOLIO ★ SELECTED WORKS ★ PROJECTS ★ PORTFOLIO ★ SELECTED WORKS ★</span>
+                    </div>
+                    <div class="font-header text-krica-brown text-lg flex gap-6" aria-hidden="true">
+                        <span>★ PROJECTS ★ PORTFOLIO ★ SELECTED WORKS ★ PROJECTS ★ PORTFOLIO ★ SELECTED WORKS ★</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECTS GRID - STRICT 2 COLUMN DESKTOP, 1 COLUMN MOBILE -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-2">
+                
+                <!-- Project 1 -->
+                <a href="https://www.madinahsalamwisata.com/" target="_blank" class="card-frame group cursor-pointer">
+                    <div class="stitch-border-top"></div>
+                    <div class="card-inner bg-krica-amber p-5 transition-colors group-hover:bg-orange-400 flex-grow flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-header text-3xl text-krica-brown mb-2 group-hover:text-white transition-colors">Madinah Salam</h3>
+                            <p class="text-sm text-black font-medium group-hover:text-white transition-colors">Umrah travel agency landing page.</p>
+                        </div>
+                        <div class="mt-4 text-xs font-bold uppercase tracking-wider text-krica-brown/60 group-hover:text-white flex items-center gap-1 justify-end relative z-10">
+                             View Project <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="stitch-border-bottom"></div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://beyond-the-numbers.vercel.app/" target="_blank" class="card-frame group cursor-pointer">
+                    <div class="stitch-border-top"></div>
+                    <div class="card-inner bg-krica-orange p-5 transition-colors group-hover:bg-red-500 flex-grow flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-header text-3xl text-white mb-2">Beyond Numbers</h3>
+                            <p class="text-sm text-white/90 font-medium group-hover:text-white transition-colors">Palestine Data & Memorial Project.</p>
+                        </div>
+                        <div class="mt-4 text-xs font-bold uppercase tracking-wider text-white/60 flex items-center gap-1 justify-end relative z-10">
+                             View Project <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="stitch-border-bottom"></div>
+                </a>
+                
+                <!-- Project 3 -->
+                <a href="https://weatherapp-tarasyah.vercel.app/" target="_blank" class="card-frame group cursor-pointer">
+                    <div class="stitch-border-top"></div>
+                    <div class="card-inner bg-blue-400 p-5 transition-colors group-hover:bg-blue-500 flex-grow flex flex-col justify-between relative overflow-hidden">
+                         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-header text-3xl text-white mb-2 block w-full">Weather Dash</h3>
+                            <p class="text-sm text-white/90 font-medium group-hover:text-white transition-colors">Real-time forecast application.</p>
+                        </div>
+                         <div class="mt-4 text-xs font-bold uppercase tracking-wider text-white/60 flex items-center gap-1 justify-end relative z-10">
+                             View Project <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="stitch-border-bottom"></div>
+                </a>
+
+                <!-- Project 4: ArabUI21 -->
+                 <a href="https://arab-ui-21.vercel.app/" target="_blank" class="card-frame group cursor-pointer">
+                    <div class="stitch-border-top"></div>
+                    <div class="card-inner bg-krica-cream p-5 transition-colors group-hover:bg-white flex-grow flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-header text-3xl text-black mb-2 block w-full">ArabUI21</h3>
+                            <p class="text-sm text-black/80 font-medium font-bold group-hover:text-black transition-colors">AI EdTech platform with Gemini Chatbot.</p>
+                        </div>
+                         <div class="mt-4 text-xs font-bold uppercase tracking-wider text-black/60 flex items-center gap-1 justify-end relative z-10">
+                             View Project <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="stitch-border-bottom"></div>
+                </a>
+
+                <!-- Project 5: Narrative Palestine -->
+                 <a href="https://narrative-palestine.vercel.app/" target="_blank" class="card-frame group cursor-pointer">
+                    <div class="stitch-border-top"></div>
+                    <div class="card-inner bg-emerald-600 p-5 transition-colors group-hover:bg-emerald-500 flex-grow flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-header text-3xl text-white mb-2">Narrative Palestine</h3>
+                            <p class="text-sm text-white/90 font-medium group-hover:text-white transition-colors">Interactive timeline of Palestinian history in 3 languages.</p>
+                        </div>
+                         <div class="mt-4 text-xs font-bold uppercase tracking-wider text-white/60 flex items-center gap-1 justify-end relative z-10">
+                             View Project <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="stitch-border-bottom"></div>
+                </a>
+
+                <!-- Project 6: NYC Property Sales -->
+                 <a href="https://tarasyah.github.io/km-feb24-medan-11/" target="_blank" class="card-frame group cursor-pointer">
+                    <div class="stitch-border-top"></div>
+                    <div class="card-inner bg-indigo-600 p-5 transition-colors group-hover:bg-indigo-500 flex-grow flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-header text-3xl text-white mb-2">NYC Property</h3>
+                            <p class="text-sm text-white/90 font-medium group-hover:text-white transition-colors">Analysis of 58k+ property units & $62.4B value.</p>
+                        </div>
+                         <div class="mt-4 text-xs font-bold uppercase tracking-wider text-white/60 flex items-center gap-1 justify-end relative z-10">
+                             View Analysis <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                    <div class="stitch-border-bottom"></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE & ACADEMIC SECTION -->
+        <section class="w-full flex flex-col gap-16">
+            
+            <!-- EXPERIENCE BLOCK -->
+            <div class="flex flex-col gap-8">
+                <!-- Experience Header -->
+                <div class="w-full overflow-hidden bg-krica-brown border-y-4 border-krica-amber py-2 -rotate-1">
+                    <div class="whitespace-nowrap animate-scroll flex gap-4 items-center">
+                        <div class="font-header text-krica-amber text-lg flex gap-6">
+                            <span>★ WORK EXPERIENCE ★ CAREER HISTORY ★ PROFESSIONAL JOURNEY ★ WORK EXPERIENCE ★</span>
+                        </div>
+                        <div class="font-header text-krica-amber text-lg flex gap-6" aria-hidden="true">
+                            <span>★ WORK EXPERIENCE ★ CAREER HISTORY ★ PROFESSIONAL JOURNEY ★ WORK EXPERIENCE ★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE FOLDER -->
+                <div class="folder-card folder-exp group w-full max-w-3xl mx-auto">
+                    <div class="folder-tab">
+                        <i data-lucide="laptop-2" class="w-6 h-6"></i>
+                        <span>EXPERIENCE_LOG</span>
+                    </div>
+                    <div class="folder-body">
+                        <!-- Large Floating Icon -->
+                        <i data-lucide="code-2" class="folder-icon-large text-blue-400"></i>
+                        
+                        <div class="relative z-10 space-y-8">
+                            <div class="timeline-connector bg-blue-500/30 left-2 top-2 bottom-2"></div>
+                            
+                            <!-- Research Assistant -->
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-lg shadow-blue-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">Universitas Indonesia</strong>
+                                <span class="text-blue-200 text-xs font-mono block mb-1">July 2025 - Present</span>
+                                <span class="text-white/80 text-sm block font-bold">Research Assistant</span>
+                                <p class="text-sm text-blue-100/70 mt-2 font-mono bg-blue-900/30 p-2 rounded border border-blue-500/20">> Assisting Prof. Dr. Apipudin M.Hum. in creating articles, books, and teaching materials.</p>
+                            </div>
+
+                            <!-- Freelance Web Developer -->
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-lg shadow-blue-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">Madinah Salam Wisata</strong>
+                                <span class="text-blue-200 text-xs font-mono block mb-1">Sep 2025</span>
+                                <span class="text-white/80 text-sm block font-bold">Freelance Web Developer</span>
+                                <p class="text-sm text-blue-100/70 mt-2 font-mono bg-blue-900/30 p-2 rounded border border-blue-500/20">
+                                    > Developed modern landing page.<br>
+                                    > Utilized Gemini Pro for content ideation.<br>
+                                    > Deployed via Vercel.
+                                </p>
+                            </div>
+
+                            <!-- Data Analyst (MSIB) -->
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-lg shadow-blue-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">RevoU Tech Academy</strong>
+                                <span class="text-blue-200 text-xs font-mono block mb-1">Feb 2024 - May 2024</span>
+                                <span class="text-white/80 text-sm block font-bold">Data Analyst Project (MSIB)</span>
+                                <p class="text-sm text-blue-100/70 mt-2 font-mono bg-blue-900/30 p-2 rounded border border-blue-500/20">
+                                    > Managed end-to-end data analysis.<br>
+                                    > Cleaned & processed complex datasets (MySQL, Excel).<br>
+                                    > Solved real-world business cases.
+                                </p>
+                            </div>
+
+                            <!-- WordPress Developer -->
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-lg shadow-blue-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">Agung Syariah Properti</strong>
+                                <span class="text-blue-200 text-xs font-mono block mb-1">Jan 2024 - Feb 2024</span>
+                                <span class="text-white/80 text-sm block font-bold">WordPress Developer</span>
+                                <p class="text-sm text-blue-100/70 mt-2 font-mono bg-blue-900/30 p-2 rounded border border-blue-500/20">
+                                    > Improved load times by 30%.<br>
+                                    > Restructured content for better navigation.
+                                </p>
+                            </div>
+
+                            <!-- Deputy Project Manager -->
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-lg shadow-blue-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">Middle East Festival (UI)</strong>
+                                <span class="text-blue-200 text-xs font-mono block mb-1">Nov 2023</span>
+                                <span class="text-white/80 text-sm block font-bold">Deputy Project Manager</span>
+                                <p class="text-sm text-blue-100/70 mt-2 font-mono bg-blue-900/30 p-2 rounded border border-blue-500/20">
+                                    > Led decoration division for large-scale event.<br>
+                                    > Coordinated schedules & delegated tasks.
+                                </p>
+                            </div>
+
+                            <!-- Geography Tutor -->
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-lg shadow-blue-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">Bimbel Laskar UI</strong>
+                                <span class="text-blue-200 text-xs font-mono block mb-1">Jan 2023 - Dec 2023</span>
+                                <span class="text-white/80 text-sm block font-bold">Geography Tutor</span>
+                                <p class="text-sm text-blue-100/70 mt-2 font-mono bg-blue-900/30 p-2 rounded border border-blue-500/20">
+                                    > Delivered engaging geography lessons.<br>
+                                    > Used Generative AI for learning materials.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACADEMIC BLOCK -->
+            <div class="flex flex-col gap-8">
+                <!-- Academic Header -->
+                <div class="w-full overflow-hidden bg-krica-brown border-y-4 border-krica-amber py-2 rotate-1">
+                    <div class="whitespace-nowrap animate-scroll-reverse flex gap-4 items-center">
+                        <div class="font-header text-krica-amber text-lg flex gap-6">
+                            <span>★ ACADEMIC BACKGROUND ★ EDUCATION ★ SCHOLARLY PURSUITS ★ ACADEMIC BACKGROUND ★</span>
+                        </div>
+                        <div class="font-header text-krica-amber text-lg flex gap-6" aria-hidden="true">
+                            <span>★ ACADEMIC BACKGROUND ★ EDUCATION ★ SCHOLARLY PURSUITS ★ ACADEMIC BACKGROUND ★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDUCATION FOLDER -->
+                <div class="folder-card folder-edu group w-full max-w-3xl mx-auto">
+                    <div class="folder-tab">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                        <span>ACADEMIC_DATA</span>
+                    </div>
+                    <div class="folder-body">
+                        <!-- Large Floating Icon -->
+                        <i data-lucide="graduation-cap" class="folder-icon-large text-yellow-400"></i>
+                        
+                        <div class="relative z-10 space-y-8">
+                            <div class="timeline-connector bg-yellow-500/30 left-2 top-2 bottom-2"></div>
+                            
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-yellow-500 border-2 border-white shadow-lg shadow-yellow-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">University of Indonesia</strong>
+                                <span class="text-yellow-200 text-xs font-mono block mb-1">Aug 2021 - June 2025</span>
+                                <span class="text-white/80 text-sm block font-bold">B.Hum in Arabic Literature</span>
+                                <span class="text-[10px] bg-yellow-500/20 text-yellow-200 px-2 py-0.5 rounded inline-block mt-2 font-mono border border-yellow-500/30">GPA 3.80/4.00</span>
+                            </div>
+                            
+                            <div class="timeline-item pl-8 relative">
+                                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-yellow-500 border-2 border-white shadow-lg shadow-yellow-500/50"></div>
+                                <strong class="text-white block text-xl font-header tracking-wide">SMAN 1 Depok</strong>
+                                <span class="text-yellow-200 text-xs font-mono block mb-1">2018 - 2021</span>
+                                <span class="text-white/80 text-sm block font-bold">Social Sciences</span>
+                                <span class="text-[10px] bg-yellow-500/20 text-yellow-200 px-2 py-0.5 rounded inline-block mt-2 font-mono border border-yellow-500/30">AVG: 90/100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS & CERTIFICATIONS SECTION -->
+        <section class="w-full mt-16 mb-16 flex flex-col gap-16">
+    <!-- Skills Header -->
+    <div class="w-full overflow-hidden bg-krica-brown border-y-4 border-krica-amber py-2 -rotate-1">
+        <div class="whitespace-nowrap animate-scroll flex gap-4 items-center">
+            <div class="font-header text-krica-amber text-lg flex gap-6">
+                <span>★ SKILLS & CERTIFICATIONS ★ TECHNICAL ARSENAL ★ PROFESSIONAL QUALIFICATIONS ★ SKILLS & CERTIFICATIONS ★</span>
+            </div>
+            <div class="font-header text-krica-amber text-lg flex gap-6" aria-hidden="true">
+                <span>★ SKILLS & CERTIFICATIONS ★ TECHNICAL ARSENAL ★ PROFESSIONAL QUALIFICATIONS ★ SKILLS & CERTIFICATIONS ★</span>
+            </div>
+        </div>
+    </div>
+    <div class="w-full max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- SKILLS FOLDER -->
+            <div class="folder-card group">
+                <div class="folder-tab bg-gradient-to-r from-purple-500 to-pink-500">
+                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                    <span>SKILLS_ARSENAL</span>
+                </div>
+                <div class="folder-body border-purple-500 bg-gradient-to-b from-purple-500/10 to-black/40">
+                    <i data-lucide="award" class="folder-icon-large text-purple-400"></i>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                        
+                        <!-- Technical Skills -->
+                        <div>
+                            <h4 class="text-purple-300 font-header text-xl mb-4 flex items-center gap-2">
+                                <i data-lucide="code" class="w-5 h-5"></i> Technical Skills
+                            </h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <span class="text-white/60 text-xs uppercase tracking-wider font-bold">Web Development</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-200 text-sm hover:bg-purple-500/40 transition-colors cursor-default">Next.js</span>
+                                        <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-200 text-sm hover:bg-purple-500/40 transition-colors cursor-default">React.js</span>
+                                        <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-200 text-sm hover:bg-purple-500/40 transition-colors cursor-default">HTML5/CSS3</span>
+                                        <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-200 text-sm hover:bg-purple-500/40 transition-colors cursor-default">JavaScript (ES6+)</span>
+                                        <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-200 text-sm hover:bg-purple-500/40 transition-colors cursor-default">Bootstrap</span>
+                                        <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-200 text-sm hover:bg-purple-500/40 transition-colors cursor-default">WordPress</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-white/60 text-xs uppercase tracking-wider font-bold">Backend & Database</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-200 text-sm hover:bg-blue-500/40 transition-colors cursor-default">Supabase</span>
+                                        <span class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-200 text-sm hover:bg-blue-500/40 transition-colors cursor-default">Firebase (Studio)</span>
+                                        <span class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-200 text-sm hover:bg-blue-500/40 transition-colors cursor-default">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-200 text-sm hover:bg-blue-500/40 transition-colors cursor-default">SQL</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-white/60 text-xs uppercase tracking-wider font-bold">Data Analysis</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded text-emerald-200 text-sm hover:bg-emerald-500/40 transition-colors cursor-default">Microsoft Excel</span>
+                                        <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded text-emerald-200 text-sm hover:bg-emerald-500/40 transition-colors cursor-default">Google Sheets</span>
+                                        <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded text-emerald-200 text-sm hover:bg-emerald-500/40 transition-colors cursor-default">Tableau</span>
+                                        <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded text-emerald-200 text-sm hover:bg-emerald-500/40 transition-colors cursor-default">Power BI</span>
+                                        <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded text-emerald-200 text-sm hover:bg-emerald-500/40 transition-colors cursor-default">Data Processing</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-white/60 text-xs uppercase tracking-wider font-bold">Tools & Platforms</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-amber-500/20 border border-amber-500/30 rounded text-amber-200 text-sm hover:bg-amber-500/40 transition-colors cursor-default">Git</span>
+                                        <span class="px-3 py-1 bg-amber-500/20 border border-amber-500/30 rounded text-amber-200 text-sm hover:bg-amber-500/40 transition-colors cursor-default">GitHub</span>
+                                        <span class="px-3 py-1 bg-amber-500/20 border border-amber-500/30 rounded text-amber-200 text-sm hover:bg-amber-500/40 transition-colors cursor-default">Vercel</span>
+                                        <span class="px-3 py-1 bg-amber-500/20 border border-amber-500/30 rounded text-amber-200 text-sm hover:bg-amber-500/40 transition-colors cursor-default">VS Code</span>
+                                        <span class="px-3 py-1 bg-amber-500/20 border border-amber-500/30 rounded text-amber-200 text-sm hover:bg-amber-500/40 transition-colors cursor-default">Figma (Basic)</span>
+                                        <span class="px-3 py-1 bg-amber-500/20 border border-amber-500/30 rounded text-amber-200 text-sm hover:bg-amber-500/40 transition-colors cursor-default">Notion</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI & Soft Skills -->
+                        <div>
+                            <h4 class="text-pink-300 font-header text-xl mb-4 flex items-center gap-2">
+                                <i data-lucide="sparkles" class="w-5 h-5"></i> AI & Soft Skills
+                            </h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <span class="text-white/60 text-xs uppercase tracking-wider font-bold">AI & Prompt Engineering</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded text-pink-200 text-sm hover:bg-pink-500/40 transition-colors cursor-default">ChatGPT</span>
+                                        <span class="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded text-pink-200 text-sm hover:bg-pink-500/40 transition-colors cursor-default">Gemini Pro</span>
+                                        <span class="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded text-pink-200 text-sm hover:bg-pink-500/40 transition-colors cursor-default">Gemini 2.5 Flash</span>
+                                        <span class="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded text-pink-200 text-sm hover:bg-pink-500/40 transition-colors cursor-default">Google AI Studio</span>
+                                        <span class="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded text-pink-200 text-sm hover:bg-pink-500/40 transition-colors cursor-default">NotebookLM</span>
+                                        <span class="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded text-pink-200 text-sm hover:bg-pink-500/40 transition-colors cursor-default">Elicit</span>
+                                        <span class="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded text-pink-200 text-sm hover:bg-pink-500/40 transition-colors cursor-default">Leonardo AI</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-white/60 text-xs uppercase tracking-wider font-bold">Soft Skills</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded text-teal-200 text-sm hover:bg-teal-500/40 transition-colors cursor-default">Event Coordination</span>
+                                        <span class="px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded text-teal-200 text-sm hover:bg-teal-500/40 transition-colors cursor-default">Administrative Support</span>
+                                        <span class="px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded text-teal-200 text-sm hover:bg-teal-500/40 transition-colors cursor-default">Project Management</span>
+                                        <span class="px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded text-teal-200 text-sm hover:bg-teal-500/40 transition-colors cursor-default">Customer Service</span>
+                                        <span class="px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded text-teal-200 text-sm hover:bg-teal-500/40 transition-colors cursor-default">Conflict Resolution</span>
+                                        <span class="px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded text-teal-200 text-sm hover:bg-teal-500/40 transition-colors cursor-default">Public Speaking</span>
+                                        <span class="px-3 py-1 bg-teal-500/20 border border-teal-500/30 rounded text-teal-200 text-sm hover:bg-teal-500/40 transition-colors cursor-default">Teaching/Tutoring</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-white/60 text-xs uppercase tracking-wider font-bold">Languages</span>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="px-3 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded text-indigo-200 text-sm hover:bg-indigo-500/40 transition-colors cursor-default">Indonesian (Native)</span>
+                                        <span class="px-3 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded text-indigo-200 text-sm hover:bg-indigo-500/40 transition-colors cursor-default">English (B2)</span>
+                                        <span class="px-3 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded text-indigo-200 text-sm hover:bg-indigo-500/40 transition-colors cursor-default">Arabic (TOAFL 563)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS FOLDER -->
+            <div class="folder-card group">
+                <div class="folder-tab bg-gradient-to-r from-yellow-500 to-orange-500">
+                    <i data-lucide="medal" class="w-6 h-6"></i>
+                    <span>CERTIFICATIONS_VAULT</span>
+                </div>
+                <div class="folder-body border-yellow-500 bg-gradient-to-b from-yellow-500/10 to-black/40">
+                    <i data-lucide="award" class="folder-icon-large text-yellow-400"></i>
+                    
+                    <div class="flex flex-col gap-4 relative z-10">
+                        
+                        <!-- ETS TOEIC -->
+                        <div class="bg-white/5 p-4 rounded border border-white/10 hover:bg-white/10 transition-colors group/cert cursor-pointer">
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="award" class="text-yellow-400 w-8 h-8 mt-1 group-hover/cert:scale-110 transition-transform"></i>
+                                <div>
+                                    <h5 class="text-white font-bold text-lg">ETS TOEIC® Listening & Reading</h5>
+                                    <p class="text-yellow-200/80 text-sm mb-1">PT International Test Center (ITC) • Sep 2025</p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="text-xs bg-yellow-500/20 text-yellow-200 px-2 py-0.5 rounded border border-yellow-500/30">Total Score: 910 (Gold Level)</span>
+                                        <span class="text-xs bg-white/10 text-white/70 px-2 py-0.5 rounded">Listening: 460</span>
+                                        <span class="text-xs bg-white/10 text-white/70 px-2 py-0.5 rounded">Reading: 450</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EF SET -->
+                        <div class="bg-white/5 p-4 rounded border border-white/10 hover:bg-white/10 transition-colors group/cert cursor-pointer">
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="award" class="text-blue-400 w-8 h-8 mt-1 group-hover/cert:scale-110 transition-transform"></i>
+                                <div>
+                                    <h5 class="text-white font-bold text-lg">EF SET English Certificate</h5>
+                                    <p class="text-blue-200/80 text-sm mb-1">EF Standard English Test • May 2025</p>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="text-xs bg-blue-500/20 text-blue-200 px-2 py-0.5 rounded border border-blue-500/30">C1 Advanced (Score: 62/100)</span>
+                                        <span class="text-xs bg-white/10 text-white/70 px-2 py-0.5 rounded">Reading: 73 (C2)</span>
+                                        <span class="text-xs bg-white/10 text-white/70 px-2 py-0.5 rounded">Listening: 78 (C2)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Google SEO -->
+                        <!-- Google SEO (Green) -->
+                        <div class="bg-white/5 p-4 rounded border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors group/cert cursor-pointer">
+                            <i data-lucide="check-circle-2" class="text-green-400 w-6 h-6 group-hover/cert:scale-110 transition-transform"></i>
+                            <span class="text-white/90 text-base font-medium">Membuat Website & Google SEO Untuk Pemula (Prakerja)</span>
+                        </div>
+
+                        <!-- RevoU (Red) -->
+                        <div class="bg-white/5 p-4 rounded border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors group/cert cursor-pointer">
+                            <i data-lucide="check-circle-2" class="text-red-400 w-6 h-6 group-hover/cert:scale-110 transition-transform"></i>
+                            <span class="text-white/90 text-base font-medium">Data Analytics & Software Dev (RevoU)</span>
+                        </div>
+
+                        <!-- Coursera (Cyan) -->
+                        <div class="bg-white/5 p-4 rounded border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors group/cert cursor-pointer">
+                            <i data-lucide="check-circle-2" class="text-cyan-400 w-6 h-6 group-hover/cert:scale-110 transition-transform"></i>
+                            <span class="text-white/90 text-base font-medium">Google Data Analytics (Coursera)</span>
+                        </div>
+
+                        <!-- UMich (Amber) -->
+                        <div class="bg-white/5 p-4 rounded border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors group/cert cursor-pointer">
+                            <i data-lucide="check-circle-2" class="text-amber-400 w-6 h-6 group-hover/cert:scale-110 transition-transform"></i>
+                            <span class="text-white/90 text-base font-medium">Web Design for Everybody (UMich)</span>
+                        </div>
+
+                        <!-- Georgia Tech (Orange) -->
+                        <div class="bg-white/5 p-4 rounded border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors group/cert cursor-pointer">
+                            <i data-lucide="check-circle-2" class="text-orange-400 w-6 h-6 group-hover/cert:scale-110 transition-transform"></i>
+                            <span class="text-white/90 text-base font-medium">English Communication Skills (Georgia Tech)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+</section>
+
+        <!-- BIG BUTTONS SECTION (Contact) -->
+        <section class="w-full max-w-2xl mx-auto">
+            <div class="grid grid-cols-2 gap-4 md:gap-6">
+                
+                <!-- LinkedIn (Blue Gradient) -->
+                <a href="https://linkedin.com/in/tarasyahfazlin" target="_blank" class="btn-gradient bg-gradient-to-br from-[#0077b5] to-[#005582] rounded-2xl p-6 flex flex-col items-center justify-center gap-2 text-white border-4 border-krica-brown shadow-xl h-40 cursor-pointer">
+                    <div class="bg-white/20 p-4 rounded-full backdrop-blur-sm">
+                        <i data-lucide="linkedin" class="w-8 h-8"></i>
+                    </div>
+                    <span class="font-header text-2xl tracking-wide">LinkedIn</span>
+                </a>
+
+                <!-- Email Me (Orange Gradient) -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tarasyahfazlint@gmail.com&su=Work%20Inquiry" target="_blank" class="btn-gradient bg-gradient-to-br from-[#ea5b25] to-[#c03e10] rounded-2xl p-6 flex flex-col items-center justify-center gap-2 text-white border-4 border-krica-brown shadow-xl h-40 cursor-pointer relative z-[60]">
+                    <div class="bg-white/20 p-4 rounded-full backdrop-blur-sm">
+                        <i data-lucide="mail" class="w-8 h-8"></i>
+                    </div>
+                    <span class="font-header text-2xl tracking-wide">Email Me</span>
+                </a>
+
+                <!-- Portfolio (Pink Gradient) - CENTERED & FULL WIDTH -->
+                <a href="https://bit.ly/Portfolio-Tarasyah" target="_blank" class="col-span-2 btn-gradient bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl p-6 flex flex-col items-center justify-center gap-2 text-white border-4 border-krica-brown shadow-xl h-40 cursor-pointer">
+                    <div class="bg-white/20 p-4 rounded-full backdrop-blur-sm">
+                        <i data-lucide="folder-heart" class="w-8 h-8"></i>
+                    </div>
+                    <span class="font-header text-3xl tracking-wide">Portfolio</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-krica-amber opacity-60 text-sm pb-8">
+            <p>© 2025 Tarasyah Fazlin. Depok, Indonesia | +6289674095935</p>
+        </footer>
+
+    </main>
+</body>
+</html>

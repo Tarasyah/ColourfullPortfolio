@@ -1,0 +1,559 @@
+/* Global Styles & Theming */
+:root {
+    /* Default (Arabic) - Warm Brown/Sand */
+    --color-orange: #ea5b25;
+    --color-amber: #f9c665;
+    --color-brown: #3e2723;
+    --color-bg: #4e342e;     /* Lighter Warm Brown */
+    --color-cream: #fff8e1;
+    --color-dark: #2d1b14;
+}
+
+/* Japanese Theme - Soft Pink/Charcoal */
+body.theme-japanese {
+    --color-orange: #ffb7c5; /* Sakura Pink */
+    --color-amber: #e6e6fa;  /* Lavender */
+    --color-brown: #5a5a5a;  /* Grey */
+    --color-bg: #4a3b45;     /* Muted Pinkish Grey */
+    --color-cream: #fff0f5;  /* Lavender Blush */
+    --color-dark: #2d242b;
+}
+
+/* Chinese Theme - Rich Red */
+body.theme-chinese {
+    --color-orange: #ff0000; /* Red */
+    --color-amber: #ffd700;  /* Gold */
+    --color-brown: #800000;  /* Maroon */
+    --color-bg: #5c0909;     /* Rich Dark Red */
+    --color-cream: #fffdd0;  /* Cream */
+    --color-dark: #2b0404;
+}
+
+/* Egypt Theme - Gold & Lapis Lazuli */
+/* Egypt Theme - Gold & Lapis Lazuli */
+body.theme-egypt {
+    --color-orange: #d4af37; /* Gold */
+    --color-amber: #40e0d0;  /* Turquoise */
+    --color-brown: #004e92;  /* Lapis Lazuli Blue */
+    --color-bg: #806000;     /* Dark Gold/Yellow */
+    --color-cream: #f5f5dc;  /* Beige/Sand */
+    --color-dark: #0f0f1a;
+}
+
+/* Finlandia Theme - Icy Blue */
+body.theme-finlandia {
+    --color-orange: #00a7e1; /* Cyan */
+    --color-amber: #ffffff;  /* White */
+    --color-brown: #005f87;  /* Dark Blue */
+    --color-bg: #2c5282;     /* Steel Blue */
+    --color-cream: #e0ffff;  /* Light Cyan */
+    --color-dark: #0b1026;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-cream);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Grid Background Pattern - Optimized */
+.bg-grid-pattern {
+    background-image: 
+        linear-gradient(rgba(255, 248, 225, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 248, 225, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* CRT Scanline Effect - Reduced for performance */
+.crt-overlay {
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.05) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    opacity: 0.15; /* Reduced from 0.3 */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #2d1b14; 
+}
+::-webkit-scrollbar-thumb {
+    background: #ea5b25; 
+    border-radius: 6px;
+    border: 3px solid #2d1b14;
+}
+
+/* Text Glow */
+.text-glow {
+    text-shadow: 
+        3px 3px 0px #ea5b25, 
+        5px 5px 0px #3e2723;
+}
+
+/* STITCHED BORDER STYLES */
+.stitch-border-top {
+    height: 4px;
+    width: 100%;
+    border-bottom: 3px dashed rgba(62, 39, 35, 0.5);
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+
+.stitch-border-bottom {
+    height: 4px;
+    width: 100%;
+    border-top: 3px dashed rgba(62, 39, 35, 0.5);
+    margin-top: 12px;
+    opacity: 0.7;
+}
+
+/* Card Container */
+.card-frame {
+    background: #3e2723;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border: 3px solid #5d4037;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure uniform height for grid */
+    overflow: hidden; /* Needed for ripple */
+}
+
+.card-frame:hover {
+    transform: scale(1.02) translateY(-5px);
+    z-index: 20;
+    border-color: #ea5b25;
+    box-shadow: 0 20px 40px rgba(234, 91, 37, 0.2);
+}
+
+.card-inner {
+    /* background: #1a0f0b; Removed to allow individual card colors */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #8d6e63;
+    position: relative;
+}
+
+/* Gradient Buttons */
+.btn-gradient {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.btn-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
+    pointer-events: none;
+}
+
+/* Sparkles */
+.sparkle {
+    position: absolute;
+    animation: float 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* 3D Tilt Effect */
+.tilt-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    overflow: hidden; /* Needed for ripple */
+}
+
+.tilt-card > div {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+}
+
+.tilt-card:hover {
+    z-index: 50;
+}
+
+/* --- NEW UNIQUE STYLES --- */
+
+/* Hero Terminal */
+.hero-terminal {
+    background: #1a0f0b;
+    border: 4px solid #3e2723;
+    border-radius: 12px;
+    box-shadow: 
+        0 0 0 4px #2d1b14,
+        0 20px 50px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #2d1b14;
+    padding: 12px 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-bottom: 2px solid #3e2723;
+}
+
+.terminal-dot {
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%;
+}
+
+/* Cyber Scroll (About Me) */
+.cyber-scroll {
+    background: #fff8e1;
+    position: relative;
+    clip-path: polygon(
+        20px 0, 100% 0, 
+        100% calc(100% - 20px), calc(100% - 20px) 100%, 
+        0 100%, 0 20px
+    );
+    border-left: 4px solid #ea5b25;
+}
+
+.cyber-scroll::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 20px; height: 20px;
+    background: #ea5b25;
+    opacity: 0.2;
+}
+
+.cyber-scroll::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 20px; height: 20px;
+    background: #ea5b25;
+    opacity: 0.2;
+}
+
+/* Data Modules (Exp/Edu) */
+.data-module {
+    /* background: #1a0f0b; Removed for individual coloring */
+    border: 1px solid #3e2723;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.data-module:hover {
+    border-color: #ea5b25;
+    box-shadow: 0 0 20px rgba(234, 91, 37, 0.1);
+}
+
+.module-header {
+    background: #2d1b14;
+    border-bottom: 1px solid #3e2723;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-grid {
+    background-image: 
+        linear-gradient(#3e2723 1px, transparent 1px),
+        linear-gradient(90deg, #3e2723 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+}
+
+.timeline-connector {
+    position: absolute;
+    left: 24px;
+    top: 60px;
+    bottom: 20px;
+    width: 2px;
+    background: #3e2723;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 1;
+    padding-left: 32px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: #ea5b25;
+    border: 2px solid #1a0f0b;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(234, 91, 37, 0.2);
+}
+
+/* --- HOVER FALLING ICON EFFECT --- */
+.hover-falling-icon {
+    position: absolute;
+    pointer-events: none;
+    z-index: 100;
+    font-size: 20px;
+    animation: hover-fall 1s linear forwards;
+}
+
+@keyframes hover-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* --- 3D TEXT EFFECT --- */
+.interactive-3d-text {
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    cursor: default;
+    display: inline-block;
+}
+
+/* --- SLOW FLOAT ANIMATION --- */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.animate-float-slow {
+    animation: float-slow 4s ease-in-out infinite;
+}
+
+/* --- FOLDER CARD DESIGN --- */
+.folder-card {
+    position: relative;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.folder-card:hover {
+    transform: translateY(-5px);
+}
+
+.folder-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    border-radius: 12px 12px 0 0;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}
+
+.folder-body {
+    background: rgba(26, 15, 11, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 0 20px 20px 20px;
+    padding: 24px;
+    border: 2px solid;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Folder Variations */
+.folder-exp .folder-tab {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+.folder-exp .folder-body {
+    border-color: #0072ff;
+    background: linear-gradient(180deg, rgba(0, 114, 255, 0.1), rgba(0,0,0,0.4));
+}
+
+.folder-edu .folder-tab {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+.folder-edu .folder-body {
+    border-color: #f7971e;
+    background: linear-gradient(180deg, rgba(247, 151, 30, 0.1), rgba(0,0,0,0.4));
+}
+
+/* Floating Icon in Folder */
+.folder-icon-large {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+    opacity: 0.1;
+    transform: rotate(-10deg);
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.folder-card:hover .folder-icon-large {
+    opacity: 0.2;
+    transform: rotate(0deg) scale(1.1);
+}
+
+/* --- THEME SWITCHER --- */
+.theme-dock {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.theme-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--color-brown);
+    border: 2px solid var(--color-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: var(--color-cream);
+}
+
+.theme-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.theme-menu {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px);
+    background: var(--color-bg);
+    border: 2px solid var(--color-brown);
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.theme-menu.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(-50%) translateX(0);
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: var(--color-cream);
+    font-family: 'Fredoka One', cursive;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.theme-option:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.theme-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+/* --- FALLING BACKGROUND EFFECTS --- */
+.falling-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Behind content but above background */
+    overflow: hidden;
+}
+
+.falling-item {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    opacity: 0.6;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* --- CHARACTER WAVE EFFECT --- */
+.wave-hover-trigger {
+    /* Ensure the parent can trigger hover */
+    display: inline-block; 
+}
+
+/* For block-level elements that we want to trigger wave, we might need to be careful. 
+   We'll let JS handle adding this class. */
+
+.char-wave {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease;
+    position: relative;
+}
+
+/* Trigger the lift and color change on hover */
+.wave-hover-trigger:hover .char-wave {
+    transform: translateY(-4px);
+    color: var(--color-orange);
+    /* The delay creates the wave */
+    transition-delay: calc(var(--char-index) * 0.03s);
+}
+
+/* Reset delay on mouse out so they fall back quickly or smoothly together */
+.wave-hover-trigger .char-wave {
+    transition-delay: 0s; /* Or keep it for wave-back effect */
+}
